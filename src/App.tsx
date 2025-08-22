@@ -6,11 +6,12 @@ import HomePage from './pages/HomePage';
 import OrderHistory from './pages/OrderHistoryPage';
 import SignupPage from './pages/SignupPage';
 import LoginPage from './pages/LoginPage';
+import TopNav from './components/TopNavigation';
 
 function App() {
   return (
     <BrowserRouter>
-      {/* Put TOPNAV here instead of importing it to every page - this doesn't refresh, but the lower section components do!  It's why React is fast b/c it re-renders only when needed*/}
+      <TopNav />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/order-history" element={<OrderHistory />} />
